@@ -1,0 +1,34 @@
+.menu-container {
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 600px) {
+  .menu-container {
+    flex-direction: column;
+  }
+}
+.menu-item {
+  display: block;
+  padding: 6px;
+  background: none;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.menu-item:hover {
+  background: mediumaquamarine;
+}
+.menu-item:hover .menu-item:hover {
+  background: cadetblue;
+}
+.menu-item > .menu-container {
+  display: none;
+  flex-direction: column;
+}
+.menu-item:hover > .menu-container {
+  display: flex;
+}
